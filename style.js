@@ -16,7 +16,6 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        totalMail: 10,
         randomMail: [],
       }
     },
