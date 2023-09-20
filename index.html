@@ -8,9 +8,11 @@
 <body>
 
     <div id="app">
-        <ul v-for="(mail, i) in randomMail">
-            <li>{{mail}}</li>
-        </ul>
+        <div  v-for="(mail, i) in randomMail">
+            <ul v-if="Object.values(this.randomMail).length == 10">
+                <li>{{mail}}</li>
+            </ul>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

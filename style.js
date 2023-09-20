@@ -21,13 +21,24 @@ const { createApp } = Vue
     },
 
     mounted() {
+      //creo un ciclo per generare le 10 mail
       for (let index = 0; index < 10; index++) {
-        
+        //genro la mail tremite axios
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+
+        //quando il server rispone eseguo la funzione
         .then(response => {
+
             console.log(response.data.response);
+
+            //metto nell' array il valore generato con la mail
             this.randomMail.push(response.data.response)
+
+            //trovo la lunghezza del mio proxy array
+            console.log(Object.values(this.randomMail).length);
         })
+
+        
       }
     }
   }).mount('#app')
